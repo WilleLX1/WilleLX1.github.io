@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>William Danielsson</title>
+
+	<!-- Font downloads -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+	<!-- The accual fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Sometype+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300&family=Sometype+Mono&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+	    .image-container {
+	        position: relative;
+	        width: 80%;
+	        overflow: hidden;
+	    }
+
+	    .border {
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+	        height: 100%;
+	        border: 4px solid transparent;
+	        transition: border-width 0.3s, border-color 0.3s;
+	        z-index: -1;
+	    }
+
+	    .image {
+	        width: 100%;
+	        transition: transform 0.3s;
+	    }
+
+	    .image-container:hover .border {
+	        border-width: 50px; /* Adjust the border width to control the animation */
+	        border-color: #6e7dab; /* Change to the desired color */
+	    }
+
+	    .image-container:hover .image {
+	        transform: scale(0.95); /* Adjust the scale factor for the image zoom */
+	    }
+
+	    /* Apply the initial image style */
+	    img {
+	        width: 80%;
+	        transition: filter 0.3s; /* Add a smooth transition for the filter property */
+	    }
+
+	    /* Add the filter effect when not hovering over the image */
+	    img:not(:hover) {
+	        filter: grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(100%);
+	    }
+
+	    button {
+	        border: 1;
+	        background-color: #231c20;
+	    }
+
+	    h5 {
+	        color: #6e7dab;
+	        font-family: 'Roboto', sans-serif;
+	    }
+
+	    h4 {
+	        color: #6e7dab;
+	        font-family: 'Roboto', sans-serif;
+	    }
+
+	    h2 {
+	        color: #c5cbdd;
+	        font-family: 'Poppins', sans-serif;
+	        font-size: 35px; /* You can adjust the font size as needed */
+	    }
+
+	    h1 {
+	        color: #c5cbdd;
+	        font-family: 'Poppins', sans-serif;
+	        font-size: 50px; /* You can adjust the font size as needed */
+	    }
+
+	    .fade-in {
+		    opacity: 0;
+		    transition: opacity 1s;
+		}
+
+		.fade-in.fade-in-active {
+		    opacity: 1;
+		}
+
+		.custom-box {
+		    border: 10px solid #231c20;
+		    width: 225px; /* Adjust the width as needed */
+		    padding: 25px;
+		    text-align: left;
+		    background-color: #463e43;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: space-between;
+		    height: 300px; /* Adjust the height as needed */
+		}
+
+		.custom-box img {
+		    width: 50px;
+		    margin: 10px 0;
+		}
+
+		.custom-box h2 {
+		    font-size: 20px;
+		    color: #c5cbdd;
+		}
+
+		.custom-box p {
+		    font-size: 14px;
+		    color: #a6acc0;
+		}
+
+		.bottom-words {
+		    display: flex;
+		    justify-content: space-between;
+		    margin-top: 10px;
+		}
+
+		.bottom-words span {
+		    font-size: 12px;
+		    color: #6a769f;
+		}
+
+	</style>
+</head>
+<body style="background-color: #231c20">
+
+	<center>
+		<!-- Titeln och inledning -->
+		<table border="0"; width="78%" class="fade-in">
+			<br><br><br><br><br><br><br><br><br><br><br>
+
+			<tr>
+				<td>
+					<h5 style="color: #6e7dab; font-family: 'Sometype Mono', monospace;">Hej, jag heter</h5>
+					<h1 style="color: #c5cbdd;">William Danielsson.</h1>
+					<h1 style="color: #6e7dab;">Reklam Utdelare</h1>
+
+					<br>
+
+					<h5>Jag är en reklam utdelare från Helsingborg, Sverige.</h5>
+
+					<br>
+
+					<button style="border: 2px solid #6e7dab; background-color: #231c20; padding: 10px 20px;">
+					    <a href="#kontakt">
+					        <p style="color: #6e7dab;">Kontakta Mig</p>
+					    </a>
+					</button>
+				</td>
+			</tr>
+		</table>
+
+		<!-- Free space -->
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<!-- 01. Om Mig -->
+		<table border="0"; width="78%" class="fade-in">
+			<tr>
+				<td width="50%">
+					<h2 style="display: inline-block; margin-right: 10px; font-family: 'Sometype Mono', monospace; color: #6e7dab; font-size: 25px;">01.</h2>
+					<h2 style="display: inline-block; margin-right: 10px;">Om Mig</h2>
+					<hr style="display: inline-block; width: 30%; vertical-align: middle;">
+
+					<h5>Hej! Jag heter William, jag går på NTI gymnasiumet i Helsingborg med teknik inriktning.</h5>
+					<h5>Just nu är jag reklam utdelare med svensk direkt reklam.</h5>
+					<h5>Några programmerings språk eller program jag gärna använder mig av:</h5>
+					<table>
+						<tr>
+							<td width="25%">
+								<ul>
+								    <li style="color: #6e7dab">
+								        <h4>Python</h4>
+								    </li>
+								    <li style="color: #6e7dab">
+								        <h4>Go</h4>
+								    </li>
+								    <li style="color: #6e7dab">
+								        <h4>Ruby</h4>
+								    </li>
+								    <li style="color: #6e7dab">
+								        <h4>Terraform</h4>
+								    </li>
+								</ul>	
+							</td>
+							<td width="25%">
+								<ul>
+								    <li style="color: #6e7dab">
+								        <h4>Python</h4>
+								    </li>
+								    <li style="color: #6e7dab">
+								        <h4>Go</h4>
+								    </li>
+								    <li style="color: #6e7dab">
+								        <h4>Ruby</h4>
+								    </li>
+								    <li style="color: #6e7dab">
+								        <h4>Terraform</h4>
+								    </li>
+								</ul>	
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td width="50%" align="right">
+					<div class="image-container">
+					    <div class="border"></div>
+					    <img src="bilder/jag.jpg" width="80%" class="image">
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<!-- Free space -->
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<!-- 02. Arbete & Ledarskap -->
+		<table width="50%" class="fade-in">
+		    <tr>
+		        <td>
+		            <h2 style="display: inline-block; margin-right: 10px; font-family: 'Sometype Mono', monospace; color: #6e7dab; font-size: 25px; vertical-align: middle;">02.</h2>
+					<h2 style="display: inline-block; margin-right: 10px; vertical-align: middle;">Arbete & Ledarskap</h2>
+					<hr style="display: inline-block; width: 30%; vertical-align: middle;">
+		        </td>
+		    </tr>
+		    <tr>
+		    	<td>
+		            <div id="titles">
+		                <ul>
+		                    <li><a href="#" id="default-title" class="title-link"><h5 style="font-family: 'Sometype Mono', monospace;">Välj en titel</h5></a></li>
+		                    <li><a href="#" id="title-2-title" class="title-link"><h5 style="font-family: 'Sometype Mono', monospace;">Kullagatan Elektronik Service</h5></a></li>
+		                    <li><a href="#" id="title-1-title" class="title-link"><h5 style="font-family: 'Sometype Mono', monospace;">Svensk Direkt Reklam</h5></a></li>
+		                    <!-- Add more titles here with unique IDs -->
+		                </ul>
+		            </div>
+		        </td>
+		        <td>
+		            <div id="content">
+		                <div id="default-content">
+		                    <h5>Välj en titel till höger för att visa text här.</h5>
+		                </div>
+		                <div id="title-1-content" style="display: none;">
+		                    <h5>Reklam Utdelare</h5>
+		                    <a href="https://www.sdr.se/helsingborg">@ SDR</a>
+		                    <br>
+		                    <h5>Jan 2021 - Nuvarande</h5>
+		                    <ul>
+		                        <li style="color: #6e7dab">Item 1</li>
+		                        <li style="color: #6e7dab">Item 2</li>
+		                    </ul>
+		                </div>
+		                <div id="title-2-content" style="display: none;">
+		                    <h5>Prao-elev</h5>
+		                    <a href="https://www.kullagatan30.se/">@ Kullagatan 30</a>
+		                    <br>
+		                    <h5>Nov - Nov 2022</h5>
+		                    <ul>
+		                        <li style="color: #6e7dab">Item 1</li>
+		                        <li style="color: #6e7dab">Item 2</li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </td>
+		    </tr>
+		</table>
+
+		<!-- Free space -->
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<!-- 03. Saker Jag Har Skapat -->
+		<table border="0"; width="78%" class="fade-in">
+			<!-- Title -->
+			<tr>
+		        <td>
+		            <h2 style="display: inline-block; margin-right: 10px; font-family: 'Sometype Mono', monospace; color: #6e7dab; font-size: 25px; vertical-align: middle;">03.</h2>
+					<h2 style="display: inline-block; margin-right: 10px; vertical-align: middle;">Saker Jag Har Skapat</h2>
+					<hr style="display: inline-block; width: 30%; vertical-align: middle;">
+		        </td>
+		    </tr>
+		    <!-- RubyRAT -->
+		    <tr>
+		        <td width="50%" style="position: relative;">
+		            <img src="bilder/rubyrat.png" alt="RubyRAT image" style="position: absolute; top: 0; left: 0; width: 100%;">
+		        </td>
+		        <td width="50%" align="right">
+		            <h5 style="color: #6e7dab; font-family: 'Sometype Mono', monospace;">Utvalt Projekt</h5>
+		            <h2>RubyRAT</h2>
+		            <div style="background-color: #463e43; padding: 10px;">
+		                <h4 style="color: #b0b7cd">
+		                    RubyRAT is a versatile remote access trojan coded in Python, harnessing a Discord bot for its Command and Control (C2) hub. This tool grants seamless remote system administration for endpoints installed with the RubyRAT bot.
+		                </h4>
+		            </div>
+		            <h4>Python  -  (Flask/SQLAlchemy)  -  MSVC++  -  PostgreSQL  -  RabbitMQ  -  Cryptography  -  Windows API</h4>
+		        </td>
+		    </tr>
+		</table>
+		
+		<!-- Free space -->
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<!-- Andra Sevärda Projekt -->
+		<table border="0"; width="50%" class="fade-in">
+			<tr>
+				<td align="center">
+					<h2>Andra Sevärda Projekt</h2>
+					<a href="#arkivet"><h4>titta på arkivet</h4></a>
+					
+					<table align="center">
+						<!-- Rad 1 -->
+						<tr>
+							<td width="33%">
+								<div class="custom-box">
+								    <img src="bilder/mapp.png" alt="Image">
+								    <h2>RubyRAT</h2>
+								    <p>Rise is a simple serverless deployment tool that allows for developers and webmasters to deploy their static website in a matter of seconds.</p>
+								    <div class="bottom-words">
+								        <span>Python</span>
+								        <span>C#</span>
+								        <span>Networking</span>
+								    </div>
+								</div>
+							</td>
+							<td width="33%">
+								<div class="custom-box">
+								    <img src="bilder/mapp.png" alt="Image">
+								    <h2>RubyRAT2</h2>
+								    <p>Rise is a simple serverless deployment tool that allows for developers and webmasters to deploy their static website in a matter of seconds.</p>
+								    <div class="bottom-words">
+								        <span>Python</span>
+								        <span>C#</span>
+								        <span>Networking</span>
+								    </div>
+								</div>
+							</td>
+							<td width="33%">
+								<div class="custom-box">
+								    <img src="bilder/mapp.png" alt="Image">
+								    <h2>RubyRAT3</h2>
+								    <p>Rise is a simple serverless deployment tool that allows for developers and webmasters to deploy their static website in a matter of seconds.</p>
+								    <div class="bottom-words">
+								        <span>Python</span>
+								        <span>C#</span>
+								        <span>Networking</span>
+								    </div>
+								</div>
+							</td>
+						</tr>
+						<!-- Rad 2 -->
+						<tr>
+							<td width="33%">
+								<div class="custom-box">
+								    <img src="bilder/mapp.png" alt="Image">
+								    <h2>RubyRAT4</h2>
+								    <p>Rise is a simple serverless deployment tool that allows for developers and webmasters to deploy their static website in a matter of seconds.</p>
+								    <div class="bottom-words">
+								        <span>Python</span>
+								        <span>C#</span>
+								        <span>Networking</span>
+								    </div>
+								</div>
+							</td>
+							<td width="33%">
+								<div class="custom-box">
+								    <img src="bilder/mapp.png" alt="Image">
+								    <h2>RubyRAT5</h2>
+								    <p>Rise is a simple serverless deployment tool that allows for developers and webmasters to deploy their static website in a matter of seconds.</p>
+								    <div class="bottom-words">
+								        <span>Python</span>
+								        <span>C#</span>
+								        <span>Networking</span>
+								    </div>
+								</div>
+							</td>
+							<td width="33%">
+								<div class="custom-box">
+								    <img src="bilder/mapp.png" alt="Image">
+								    <h2>RubyRAT6</h2>
+								    <p>Rise is a simple serverless deployment tool that allows for developers and webmasters to deploy their static website in a matter of seconds.</p>
+								    <div class="bottom-words">
+								        <span>Python</span>
+								        <span>C#</span>
+								        <span>Networking</span>
+								    </div>
+								</div>
+							</td>
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+
+		<!-- Free space -->
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<!-- Slut Meddelande -->
+		<table border="0"; width="50%" class="fade-in">
+			<tr>
+				<td align="center">
+					<h4 style="font-family: 'Sometype Mono', monospace; color: #6e7dab;">04. Vad Kommer Härnäst?</h4>
+					<h1>Kom I Kontakt</h1>
+					<h4>
+						Jag letar just nu efter nya möjligheter och min inkorg är alltid öppen! Oavsett om du har en fråga eller bara vill säga hej så ska jag göra mitt bästa för att återkomma till dig ASAP!
+					</h4>
+
+					<br>
+					
+					<button style="border: 2px solid #6e7dab; background-color: #231c20; padding: 10px 30px;">
+					    <a href="mailto:wdanielsson70@gmail.com">
+					        <p style="color: #6e7dab;">Säg Hej</p>
+					    </a>
+					</button>	
+				</td>
+			</tr>
+		</table>
+
+		<!-- Free space -->
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	</center>
+
+	<script type="text/javascript">
+	    // Function to show/hide content based on clicked title
+	    function showContent(contentId) {
+	        var contentElements = document.querySelectorAll('#content > div');
+	        for (var i = 0; i < contentElements.length; i++) {
+	            contentElements[i].style.display = 'none';
+	        }
+	        document.getElementById(contentId).style.display = 'block';
+	    }
+
+	    // Add click event listeners to each title link
+	    var titleLinks = document.querySelectorAll('.title-link');
+	    for (var i = 0; i < titleLinks.length; i++) {
+	        titleLinks[i].addEventListener('click', function (event) {
+	            event.preventDefault();
+	            var contentId = this.id.replace('-title', '-content');
+	            showContent(contentId);
+	        });
+	    }
+	</script>
+	<script type="text/javascript">
+        // Function to check if an element is in the viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        // Function to handle the scrolling and fade-in effect
+        function handleScroll() {
+		    var tables = document.querySelectorAll('table.fade-in');
+
+		    tables.forEach(function (table) {
+		        if (isElementInViewport(table)) {
+		            table.classList.add('fade-in-active');
+		        }
+		    });
+		}
+
+
+        // Add a scroll event listener to trigger the fade-in effect
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+
+        // Initial check on page load
+        handleScroll();
+    </script>
+
+</body>
+</html>
