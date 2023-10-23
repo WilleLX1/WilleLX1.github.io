@@ -128,10 +128,55 @@
 		    font-size: 12px;
 		    color: #6a769f;
 		}
+		
+		/* New styles for the menu and button */
+        .menu {
+		    position: absolute;
+		    top: 20px;
+		    right: 20px;
+		    display: flex;
+		    align-items: center;
+		}
+
+        .menu-item {
+		    list-style: none;
+		    margin-right: 15px; /* Adjust the margin for horizontal spacing */
+		    display: inline-block;
+		}
+
+        .menu-item a {
+            text-decoration: none;
+		    color: #c5cbdd;
+		    font-family: 'Poppins', sans-serif;
+		    font-size: 18px;
+        }
+
+        .resume-button {
+            border: 1px solid #6e7dab;
+            background-color: #231c20;
+            padding: 5px 20px;
+        }
 
 	</style>
 </head>
 <body style="background-color: #231c20">
+	<!-- Update the menu and the "Button for Resume" -->
+	<div class="menu">
+	    <ul>
+	        <li class="menu-item"><a href="#OmMig"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">01.</span> About</h5></a></li>
+	        <li class="menu-item"><a href="#omMig"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">02.</span> Experience</h5></a></li>
+	        <li class="menu-item"><a href="#Projekt"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">03.</span> Projects</h5></a></li>
+	        <li class="menu-item"><a href="#kontakt"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">04.</span> Contact</h5></a></li>
+	        <li class="menu-item"><a href="#blog"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">05.</span> Blog</h5></a></li>
+	        <li class="menu-item">
+	            <button class="resume-button">
+	                <a href="#resume">
+	                    <p style="color: #6e7dab;">Resume</p>
+	                </a>
+	            </button>
+	        </li>
+	    </ul>
+	</div>
 
 	<center>
 		<!-- Titeln och inledning -->
