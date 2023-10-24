@@ -163,17 +163,17 @@
 	<!-- Update the menu and the "Button for Resume" -->
 	<div class="menu">
 	    <ul>
-	        <li class="menu-item"><a href="#OmMig"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">01.</span> About</h5></a></li>
-	        <li class="menu-item"><a href="#omMig"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">02.</span> Experience</h5></a></li>
+	       	<li class="menu-item"><a href="#OmMig"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">01.</span> About</h5></a></li>
+	        <li class="menu-item"><a href="#Experience"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">02.</span> Experience</h5></a></li>
 	        <li class="menu-item"><a href="#Projekt"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">03.</span> Projects</h5></a></li>
 	        <li class="menu-item"><a href="#kontakt"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">04.</span> Contact</h5></a></li>
 	        <li class="menu-item"><a href="#blog"><h5 style="color: white; font-family: 'Sometype Mono', monospace;"><span style="color: #6e7dab;">05.</span> Blog</h5></a></li>
 	        <li class="menu-item">
-	            <button class="resume-button">
-	                <a href="#resume">
+	            <a href="#resume">
+	                <button class="resume-button">
 	                    <p style="color: #6e7dab;">Resume</p>
-	                </a>
-	            </button>
+	                </button>
+	            </a>
 	        </li>
 	    </ul>
 	</div>
@@ -208,7 +208,7 @@
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 		<!-- 01. Om Mig -->
-		<table border="0"; width="78%" class="fade-in">
+		<table border="0"; width="78%" class="fade-in" id="OmMig">
 			<tr>
 				<td width="50%">
 					<h2 style="display: inline-block; margin-right: 10px; font-family: 'Sometype Mono', monospace; color: #6e7dab; font-size: 25px;">01.</h2>
@@ -268,7 +268,7 @@
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 		<!-- 02. Arbete & Ledarskap -->
-		<table width="50%" class="fade-in">
+		<table width="50%" class="fade-in" id="Experience">
 		    <tr>
 		        <td>
 		            <h2 style="display: inline-block; margin-right: 10px; font-family: 'Sometype Mono', monospace; color: #6e7dab; font-size: 25px; vertical-align: middle;">02.</h2>
@@ -321,7 +321,7 @@
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 		<!-- 03. Saker Jag Har Skapat -->
-		<table border="0"; width="78%" class="fade-in">
+		<table border="0"; width="78%" class="fade-in" id="Projekt">
 			<!-- Title -->
 			<tr>
 		        <td>
@@ -352,7 +352,7 @@
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 		<!-- Andra Sevärda Projekt -->
-		<table border="0"; width="50%" class="fade-in">
+		<table border="0" width="50%" class="fade-in fade-in-active">
 			<tr>
 				<td align="center">
 					<h2>Andra Sevärda Projekt</h2>
@@ -447,7 +447,7 @@
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 		<!-- Slut Meddelande -->
-		<table border="0"; width="50%" class="fade-in">
+		<table border="0"; width="50%" class="fade-in" id="kontakt">
 			<tr>
 				<td align="center">
 					<h4 style="font-family: 'Sometype Mono', monospace; color: #6e7dab;">04. Vad Kommer Härnäst?</h4>
@@ -521,6 +521,52 @@
         // Initial check on page load
         handleScroll();
     </script>
+    <script type="text/javascript">
+	    // Function to scroll smoothly to the target element
+	    function scrollToSection(targetId) {
+	        var target = document.getElementById(targetId);
+	        if (target) {
+	            target.scrollIntoView({ behavior: 'smooth' });
+	        }
+	    }
 
+	    // Add click event listeners to each menu item
+	    var menuLinks = document.querySelectorAll('.menu-item a');
+	    menuLinks.forEach(function (link) {
+	        link.addEventListener('click', function (event) {
+	            event.preventDefault();
+	            var targetId = this.getAttribute('href').substring(1); // Remove the '#' character
+	            scrollToSection(targetId);
+	        });
+	    });
+	</script>
+	<script type="text/javascript">
+        // Function to check if an element is in the viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        // Function to handle the scrolling and fade-in effect
+        function handleScroll() {
+            var tables = document.querySelectorAll('table.fade-in');
+
+            tables.forEach(function (table) {
+                if (isElementInViewport(table)) {
+                    table.classList.add('fade-in-active');
+                }
+            });
+        }
+
+        // Add a scroll event listener to trigger the fade-in effect
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+
+        // Initial check on page load
+        handleScroll();
+    </script>
 </body>
 </html>
